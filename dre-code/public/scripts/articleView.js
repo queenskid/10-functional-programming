@@ -2,7 +2,7 @@
 var app = app || {};
 
 (function(module) {
-  // TODO: Wrap the contents of this file, except for the preceding 'use strict' and 'var app...' declararions, in an IIFE.
+  // DONE: Wrap the contents of this file, except for the preceding 'use strict' and 'var app...' declararions, in an IIFE.
   // Give the IIFE a parameter called 'module'.
   // At the very end of the code, but still inside the IIFE, attach the 'articleView' object to 'module'.
   // Where the IIFE is invoked, pass in the global 'app' object that is defined above.
@@ -94,7 +94,7 @@ var app = app || {};
     var article;
     $('#articles').empty();
 
-    article = new Article({
+    article = new app.Article({
       title: $('#article-title').val(),
       author: $('#article-author').val(),
       authorUrl: $('#article-author-url').val(),
@@ -109,7 +109,7 @@ var app = app || {};
 
   articleView.submit = event => {
     event.preventDefault();
-    let article = new Article({
+    let article = new app.Article({
       title: $('#article-title').val(),
       author: $('#article-author').val(),
       authorUrl: $('#article-author-url').val(),
